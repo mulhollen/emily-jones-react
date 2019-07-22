@@ -1,13 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css?family=Lato|Vollkorn:700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:700i|Playfair+Display:700&display=swap');
+/* "black" #2B040A */
+/* deep red #81021C */
+/* hover purple #8A4254 */
+/* white #fff */
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  color: #2B040A;
 }
