@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 //pages
-import Instagram from './components/Instagram/Insta';
+import InstaGrid from './components/Instagram/Insta';
 import Footer from './components/Footer';
 //components
 import BookNow from './components/BookNow';
@@ -37,7 +37,7 @@ class Home extends React.Component {
                     <h1>in-home lash extensions for folx sick of namaste</h1>
                     <BookNow buttoncolor={'#81021C'} textcolor={"#fff"} />
                 </Main>
-                <Instagram />
+                <InstaGrid account="_emilyajones" numberOfMediaElements={4} />
                 <Footer />
             </div>
         );
