@@ -13,7 +13,7 @@ const InstaDiv = styled.div`
     }
    
     a{
-        color: #81021C;
+        color: #3E0609;
     }
 
     a:hover {

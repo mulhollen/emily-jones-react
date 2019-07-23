@@ -11,9 +11,10 @@ import { slide as Menu } from 'react-burger-menu'
 import Home from '../Home';
 import About from '../About';
 import Contact from '../Contact';
-import Book from '../Book';
 import Services from '../Services';
 import BeforeAppointment from '../BeforeAppointment';
+
+import BookNow from '../components/BookNow';
 
 import './nav.css';
 
@@ -27,6 +28,7 @@ const Navbar = styled.div`
     height: 70px;
     position: fixed;
     background-color: #fff;
+    z-index: 10;
 
 
     h2 {
@@ -45,9 +47,40 @@ const Navbar = styled.div`
 
     #logo:hover {
         text-decoration: none;
-        color: #81021C;
+        color: #3E0609;
     }
 `
+
+const RightNav = styled.div`
+
+hr {
+    background-color: #fff;
+  }
+  
+  .menu-item {
+    color: #fff;
+    outline: none;
+  }
+  
+  .menu-item:hover,
+  .menu-item:active {
+    text-decoration: underline;
+  }
+
+`
+
+const NavHolder = styled.div`
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    outline: none;
+
+    a {
+        position: relative;
+        left: 12%;
+    }
+`
+
 
 var menuSize;
 
@@ -72,7 +105,7 @@ class Nav extends React.Component {
     }
 
     componentDidUpdate(){
-        console.log("can I close", this.state.menuOpen);
+        // console.log("can I close", this.state.menuOpen);
     }
 
     handleStateChange (state) {
@@ -99,20 +132,25 @@ class Nav extends React.Component {
                         <NavLink id="logo" to='/ '>ej</NavLink>
                     </div>
                 </Navbar>
-                <div className="rightNav">
+                <RightNav className="rightNav">
                     <Menu width={ menuSize } isOpen={this.state.menuOpen} onStateChange={(state) => this.handleStateChange(state)}>
-                        <NavLink id="book" className="menu-item" to='/book' onClick={() => this.closeMenu()}>book</NavLink>
+                        <NavHolder>
+                            <BookNow textcolor={'#fff'} />
+                        </NavHolder>
+                        <hr />
                         <NavLink id="about" className="menu-item" to='/about' onClick={() => this.closeMenu()}>about</NavLink>                            
+                        <hr />
                         <NavLink id="services" className="menu-item" to='/services' onClick={() => this.closeMenu()}>services</NavLink>
+                        <hr />
                         <NavLink id="contact" className="menu-item" to='/contact' onClick={() => this.closeMenu()}>contact</NavLink>
+                        <hr />
                         <NavLink id="beforeAppointment" className="menu-item" to='/before-appointment' onClick={() => this.closeMenu()}>before your appointment</NavLink>
                     </Menu>
-                </div>
+                </RightNav>
                 <Switch>
                     <Route path="/ " component={Home} />
                     <Route path="/about" component={About} />
                     <Route path="/contact" component={Contact} />
-                    <Route path="/book" component={Book} />
                     <Route path="/services" component={Services} />
                     <Route path="/before-appointment" component={BeforeAppointment} />
                 </Switch>

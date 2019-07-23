@@ -1,27 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Vollkorn:700i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:700i|Playfair+Display:700&display=swap');
+/* style guide */
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sancreek&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap');
+
 /* "black" #2B040A */
-/* deep red #81021C */
+/* deep red #3E0609 */
 /* hover purple #8A4254 */
 /* white #fff */
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 4rem;
   font-weight: bold;
-  color: #fff;
 }
 
 h3 {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
+  font-family: 'Noto Sans', sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
+h5 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: .45rem;
+  font-weight: bold;
+  color: #2B040A;
+}
+
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1rem;
   font-weight: normal;
   color: #2B040A;
+}
+
+.centerVH {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

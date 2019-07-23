@@ -12,7 +12,7 @@ import ejmain from '../img/ejmain.png';
 const Main = styled.div`
     width: 100vw;
     background: url(${ejmain});
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.1) 100%), url(${ejmain});
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.1) 100%), url(${ejmain});
     background-position: top;
     height: 88vh;
     margin-top: 40px;
@@ -20,9 +20,9 @@ const Main = styled.div`
 
     
     h1 {
-        font-size: 4rem;
+        font-size: 3.25rem;
         padding: 4rem 0 1rem 0;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        color: #fff;
     }
 `
 
@@ -34,8 +34,8 @@ class Home extends React.Component {
         return (
             <div id="homeWhereAmI">
                 <Main>
-                    <h1>in-home lash extensions for folx sick of namaste</h1>
-                    <BookNow buttoncolor={'#81021C'} textcolor={"#fff"} />
+                    <h1>LASH EXTENSIONS WHEREVER YOU ARE</h1>
+                    <BookNow textcolor={"#fff"} />
                 </Main>
                 <InstaGrid account="_emilyajones" numberOfMediaElements={4} />
                 <Footer />

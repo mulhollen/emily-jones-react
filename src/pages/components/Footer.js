@@ -5,12 +5,13 @@ const FooterComponent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #fff;
+  background: #000;
   padding-top: 1rem;
+  margin-top: 1rem;
   
   
   p {
-    color: #2B040A;
+    color: #fff;
     margin-left: .75rem;
     line-height: .75rem;
   }
@@ -20,7 +21,7 @@ const FooterComponent = styled.div`
     }
 
   .fa-instagram {
-    color: #2B040A;
+    color: #fff;
     width: 25px;
     height: 25px;
   }
